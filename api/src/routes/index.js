@@ -86,7 +86,7 @@ router.get('/recipes/:id', async (req, res) => {
 // Recibe los datos recolectados desde el formulario controlado de la ruta de creación de recetas por body
 // Crea una receta en la base de datos relacionada con sus tipos de dietas.
 router.post('/recipes', async (req, res) => {
-
+    asdasdas
 })
 
 // [ ] GET /diets:
