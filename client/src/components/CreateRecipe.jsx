@@ -112,28 +112,28 @@ const CreateRecipe = () => {
                         <form onSubmit={e => handleSubmit(e)}>
                             <div className={s.container4}>
                                 <label>Name</label>
-                                <input className={s.input} type="text" value={post.title} placeholder='Name your recipe' name='title' onChange={e => handleInputChange(e)} />
+                                <input className={s.input} autoComplete='off' type="text" value={post.title} placeholder='Name your recipe' name='title' onChange={e => handleInputChange(e)} />
                                 {errors.title && (
                                     <p className={s.errors}>{errors.title}</p>
                                 )}
                             </div>
                             <div className={s.container4}>
                                 <label>Image</label>
-                                <input className={s.input} type="text" value={post.image} placeholder='Image URL' name='image' onChange={e => handleInputChange(e)} />
+                                <input className={s.input} autoComplete='off' type="text" value={post.image} placeholder='Image URL' name='image' onChange={e => handleInputChange(e)} />
                                 {errors.image && (
                                     <p className={s.errors}>{errors.image}</p>
                                 )}
                             </div>
                             <div className={s.container4}>
                                 <label>Summary</label>
-                                <input className={s.input} type="text" value={post.summary} placeholder='Write a summary' name='summary' onChange={e => handleInputChange(e)} />
+                                <input className={s.input} autoComplete='off' type="text" value={post.summary} placeholder='Write a summary' name='summary' onChange={e => handleInputChange(e)} />
                                 {errors.summary && (
                                     <p className={s.errors}>{errors.summary}</p>
                                 )}
                             </div>
                             <div className={s.container4}>
                                 <label>Instructions</label>
-                                <input className={s.input} type='text' value={post.instructions} name='instructions' onChange={e => handleInputChange(e)} />
+                                <input className={s.input} autoComplete='off' type='text' value={post.instructions} placeholder='Write the instructions' name='instructions' onChange={e => handleInputChange(e)} />
                                 {errors.instructions && (
                                     <p className={s.errors}>{errors.instructions}</p>
                                 )}
