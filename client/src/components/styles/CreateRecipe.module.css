@@ -1,0 +1,166 @@
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: auto;
+    width: 99vw;
+    background-image: url(../../images/diet.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: -100px;
+    align-items: center;
+    color: white;
+}
+
+.titleContainer {
+    width: 65%;
+    height: 4rem;
+    backdrop-filter: blur(3px) brightness(50%);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    width: 15rem;
+}
+
+.container2 {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    width: 65%;
+    backdrop-filter: blur(3px) brightness(50%);
+    height: auto;
+    padding: 2rem 4rem 4rem 4rem;
+}
+
+.input {
+    height: 2rem;
+    width: 44rem;
+    border-radius: 8px;
+}
+
+.input2 {
+    height: 2rem;
+    width: 44rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.container4 {
+    width: 35rem;
+    margin-bottom: 1rem;
+}
+
+.diets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.type {
+    margin-bottom: 1rem;
+}
+
+.selected {
+    border-radius: 10px;
+    width: 28rem;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: space-between;
+    margin-bottom: 1rem;
+    padding-top: 0.4rem;
+    background-color: #8f9955dc;
+}
+
+.dietName {
+    padding-top: 0.3rem;
+    width: 20rem;
+    text-transform: capitalize;
+}
+
+.button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    border-radius: 50%;
+    border-color: #919191;
+    background-color: #565c32;
+    color: white;
+    margin-left: 5rem;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(168 180 96);
+    cursor: pointer;
+}
+
+.button2 {
+    width: 2rem;
+    height: 2rem;
+    background-color: red;
+    border-radius: 50%;
+    border-color: #919191;
+    background-color: #565c32;
+    color: white;
+    margin-left: 5rem;
+}
+
+.button2:hover {
+    color: white;
+    background-color: rgb(168 180 96);
+    cursor: pointer;
+}
+
+.errors {
+    font-size: 18px;
+    color: rgb(250, 106, 106);
+    font-weight: bold;
+}
+
+.back {
+    width: 45rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end
+}
+
+.create {
+    width: 45rem;
+    height: 3rem;
+    border-bottom: 0px solid black;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #919c5e;
+    color: white;
+    cursor: pointer;
+}
+
+.create:hover {
+    cursor: pointer;
+    background-color: #818a4d;
+}

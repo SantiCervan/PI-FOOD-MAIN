@@ -1,0 +1,145 @@
+* {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+.image {
+    width: 312px;
+    height: 231px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.container {
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../../images/palta.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: -100px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 4rem;
+}
+
+.border {
+    margin-top: 2rem;
+    border-radius: 1rem;
+    height: auto;
+    width: 80%;
+    backdrop-filter: blur(3px) brightness(50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.orderby {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 400px;
+}
+
+.p {
+    padding-right: 1rem;
+}
+
+.input {
+    height: 2rem;
+    width: 15rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.button {
+    height: 2rem;
+    width: 4rem;
+    border-radius: 10px;
+    border-color: #919191;
+    background-color: #565c32;
+    color: white;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(168 180 96);
+    cursor: pointer;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.border2 {
+    margin-top: 2rem;
+    border-radius: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: auto;
+    width: 80%;
+    backdrop-filter: blur(3px) brightness(50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    margin: 1rem 1rem 1rem 1rem;
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8f9955dc;
+    justify-content: space-between;
+    color: white;
+    border-radius: 1.5rem;
+}
+
+.card:hover {
+    background-color: #818a4ddc;
+}
+
+.title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    width: 20rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.diets {
+    margin-top: 2rem;
+    width: 75%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* display: table; */
+}
+
+.list {
+    width: 50%;
+    text-align: center;
+}
+
+.paginated {
+    margin: 2rem 1rem 2rem 1rem;
+}

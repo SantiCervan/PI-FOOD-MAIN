@@ -1,0 +1,99 @@
+.nav {
+    position: fixed;
+    z-index: 999;
+    background-color: #596035;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.container {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 3rem;
+}
+
+.icon2 {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-left: 3rem;
+}
+
+.home {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 27rem;
+    cursor: pointer;
+}
+
+.search {
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 30rem;
+}
+
+.input {
+    height: 2rem;
+    width: 18rem;
+    border-radius: 7px;
+}
+
+.submit {
+    color: rgb(255, 255, 255);
+    background-color: #596035;
+    border: 0px solid black;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 4rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: rgb(170, 170, 170);
+}
+
+.create {
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 26.5rem;
+}
+
+
+.button {
+    color: rgb(255, 255, 255);
+    background-color: #596035;
+    height: 4rem;
+    width: 100%;
+    border: 0px solid black;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    color: rgb(170, 170, 170);
+}

@@ -1,0 +1,119 @@
+* {
+    font-family: sans-serif;
+}
+
+.padre {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: auto;
+    background-image: url(../../images/diet.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: -100px;
+}
+
+.container {
+    overflow-x: hidden !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding: 2.2rem 0;
+    margin-top: 3rem;
+}
+
+.border {
+    border-radius: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.1rem;
+    height: auto;
+    width: 65%;
+    backdrop-filter: blur(3px) brightness(50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.container2 {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container3 {
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.title {
+    text-transform: uppercase;
+    color: rgb(163, 228, 163);
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.healthScore {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-right: 5rem;
+}
+
+.types {
+    margin-bottom: 3rem;
+}
+
+.image {
+    border-radius: 1rem;
+    width: 556px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.p {
+    text-align: justify;
+    margin-left: 9rem;
+    margin-right: 9rem;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.title2 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    text-transform: uppercase;
+    color: rgb(163, 228, 163);
+    margin-top: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    border-color: #919191;
+    background-color: #565c32;
+    color: white;
+}
+
+.button:hover {
+    color: white;
+    background-color: rgb(168 180 96);
+    cursor: pointer;
+}
+
+.buttoncontainer {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+}

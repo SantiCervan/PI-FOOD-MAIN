@@ -1,0 +1,27 @@
+* {
+    font-family: sans-serif;
+}
+
+.stylePaginated {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.styleButton {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 30px;
+    height: 30px;
+    font-size: 15px;
+    background-color: #565c32;
+    color: white;
+    border: 0px solid white;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.styleButton:hover {
+    background-color: rgb(168 180 96);
+    border: 1px solid #565c32;
+}

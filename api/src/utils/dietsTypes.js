@@ -1,4 +1,4 @@
-const dietasArray = ['Whole30', 'Low FODMAP', 'Primal', 'Paleo', 'Pescetarian', 'Vegan', 'Ovo-Vegetarian', 'Lacto-Vegetarian', 'Vegetarian', 'Ketogenic', 'Gluten Free']
+const dietasArray = ['vegetarian', 'vegan', 'pescatarian', 'primal', 'paleolithic', 'lacto ovo vegetarian', 'ketogenic', 'gluten free', 'dairy free', 'fodmap friendly', 'whole 30']
 
 module.exports = {
     dietasArray
