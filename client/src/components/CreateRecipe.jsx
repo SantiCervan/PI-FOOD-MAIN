@@ -53,14 +53,11 @@ const CreateRecipe = () => {
             ...post,
             [e.target.name]: e.target.value
         });
-        console.log(post)
         setErrors(validate({
             ...post,
             [e.target.name]: e.target.value
         }));
     }
-
-    useEffect(() => { console.log(post) }, [post])
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -94,7 +91,7 @@ const CreateRecipe = () => {
             diets: [...post.diets]
         }));
     }
-    console.log(diets);
+
     return (
         <div>
             <Navbar></Navbar>

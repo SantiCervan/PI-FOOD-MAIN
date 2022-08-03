@@ -18,7 +18,7 @@ const Home = () => {
     const [recipesPerPage, setRecipesPerPage] = useState(9);
     const lastRecipe = currentPage * recipesPerPage;
     const firstRecipe = lastRecipe - recipesPerPage;
-    const pagedRecipes = recipes.slice(firstRecipe, lastRecipe);
+    const pagedRecipes = recipes.slice(firstRecipe, lastReciple);
 
     const paginate = (number) => {
         setCurrentPage(number)
@@ -83,8 +83,6 @@ const Home = () => {
                 <div className={s.border2}>
                     {
                         pagedRecipes && pagedRecipes?.map((el) => {
-                            console.log('hola');
-                            console.log(pagedRecipes);
                             return (
                                 <Link className={s.card} to={`/recipes/${el.id}`} key={el.id}>
                                     <h2 className={s.title}>{el.title}</h2>

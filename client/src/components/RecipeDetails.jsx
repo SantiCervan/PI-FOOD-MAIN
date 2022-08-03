@@ -10,8 +10,6 @@ const RecipeDetails = () => {
     const details = useSelector(state => state.details)
     const { id } = useParams()
 
-    console.log(details);
-
     useEffect(() => {
         if (typeof id === 'number') {
             dispatch(getRecipeDetails(parseInt(id)))

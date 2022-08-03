@@ -5,7 +5,6 @@ axios.defaults.baseURL = 'http://localhost:3001'
 export function getAllRecipes() {
     return async function (dispatch) {
         const recipe = await axios.get('/recipes')
-        console.log(recipe.data);
         recipe.data = recipe.data.map(r => {
             if (r.id.toString().includes("-")) {
                 r.diets = r.diets.map((d) => {
@@ -24,7 +23,6 @@ export function getAllRecipes() {
 export function getRecipesByName(title) {
     return async function (dispatch) {
         const recipe = await axios.get(`/recipes?title=${title}`)
-        console.log(recipe);
         if (recipe.data === "The required recipe doesn't exist.") {
             return alert("The required recipe doesn't exist.")
         } else {
@@ -47,7 +45,6 @@ export function getRecipesByName(title) {
 export function getRecipeDetails(payload) {
     return async function (dispatch) {
         const { data } = await axios.get(`/recipes/${payload}`)
-        console.log(data);
         if (data.id.toString().includes("-")) {
             data.diets = data.diets.map((d) => {
                 return d.name;

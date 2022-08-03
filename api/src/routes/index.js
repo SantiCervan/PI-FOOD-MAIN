@@ -129,25 +129,6 @@ router.post('/recipes', async (req, res) => {
             summary,
             instructions,
         })
-        console.log(newRecipes)
-        // if (diets.length > 0) {
-        //     await Promise.all(diets.map(async (d) => {
-        //         const dietDb = Diet.findOne({
-        //             where: {
-        //                 name: d
-        //             }
-        //         });
-        //         await newRecipes.addDiet(dietDb.name)
-        //     }))
-        // }
-
-        // if (diets.length > 0) {
-        //     await Promise.all(diets.map(async (dieta) => {
-        //         let diet = await Diet.findOne({ where: { name: dieta } });
-        //         await newRecipes.addDiet(diet.id);
-        //     }));
-        // }
-
         diets.map(async d => {
             const dbDiet = await Diet.findOrCreate({
                 where: {
