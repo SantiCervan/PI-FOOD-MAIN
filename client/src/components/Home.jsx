@@ -18,7 +18,7 @@ const Home = () => {
     const [recipesPerPage, setRecipesPerPage] = useState(9);
     const lastRecipe = currentPage * recipesPerPage;
     const firstRecipe = lastRecipe - recipesPerPage;
-    const pagedRecipes = recipes.slice(firstRecipe, lastReciple);
+    const pagedRecipes = recipes.slice(firstRecipe, lastRecipe);
 
     const paginate = (number) => {
         setCurrentPage(number)
