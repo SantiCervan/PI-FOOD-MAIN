@@ -29,10 +29,13 @@ module.exports = (sequelize) => {
       }
     },
     summary: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     instructions: {
+      type: DataTypes.TEXT,
+    },
+    dishTypes: {
       type: DataTypes.TEXT,
     },
   }, {

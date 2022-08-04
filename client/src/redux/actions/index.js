@@ -48,7 +48,7 @@ export function getRecipeDetails(payload) {
         if (data.id.toString().includes("-")) {
             data.diets = data.diets.map((d) => {
                 return d.name;
-            });
+            })
         }
         return dispatch({
             type: 'GET_RECIPE_DETAILS',
@@ -68,6 +68,16 @@ export function getAllDiets() {
 }
 
 
+export function getRecipeDb() {
+    return async function (dispatch) {
+        let json = await axios.get('/recipesdatabase');
+        return dispatch({
+            type: 'GET_RECIPE_DB',
+            payload: json.data
+        })
+    }
+}
+
 export function orderByName(payload) {
     return {
         type: 'ORDER_BY_NAME',
@@ -86,6 +96,12 @@ export function filterByDiet(payload) {
     return {
         type: 'FILTER_BY_DIET',
         payload
+    }
+}
+
+export function clearDetails() {
+    return {
+        type: 'CLEAR_DETAILS',
     }
 }
 

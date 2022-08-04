@@ -17,7 +17,7 @@
 }
 
 .titleContainer {
-    width: 65%;
+    width: 50rem;
     height: 4rem;
     backdrop-filter: blur(3px) brightness(50%);
     border-radius: 2rem;
@@ -46,7 +46,7 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 2rem;
-    width: 65%;
+    width: 50rem;
     backdrop-filter: blur(3px) brightness(50%);
     height: auto;
     padding: 2rem 4rem 4rem 4rem;

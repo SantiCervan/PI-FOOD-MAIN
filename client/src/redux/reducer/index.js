@@ -1,8 +1,9 @@
 const initialState = {
     recipes: [],
     recipesCopy: [],
-    diets: [],
     details: [],
+    diets: [],
+    recipesDb: [],
 }
 
 function rootReducer(state = initialState, action) {
@@ -17,6 +18,11 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 diets: action.payload
+            }
+        case 'GET_RECIPE_DB':
+            return {
+                ...state,
+                recipesDb: action.payload
             }
         case 'GET_RECIPES_BY_NAME':
             return {
@@ -70,6 +76,11 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 details: action.payload
+            }
+        case 'CLEAR_DETAILS':
+            return {
+                ...state,
+                details: []
             }
         case 'POST_RECIPE':
             return {

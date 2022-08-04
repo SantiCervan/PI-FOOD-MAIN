@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllRecipes, filterByDiet, orderByName, orderByScore, getAllDiets } from '../redux/actions';
+import { getAllRecipes, filterByDiet, orderByName, orderByScore, getAllDiets, clearDetails } from '../redux/actions';
 import Navbar from "../components/Navbar";
 import Paginated from './Paginated';
 import s from './styles/Home.module.css'
@@ -25,7 +25,16 @@ const Home = () => {
     };
 
     useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    }, [dispatch])
+
+    useEffect(() => {
         dispatch(getAllRecipes())
+        dispatch(clearDetails())
     }, [dispatch])
 
     useEffect(() => {
@@ -70,6 +79,7 @@ const Home = () => {
                             <p className={s.p}>Filter by:</p>
                             <select className={s.input} onChange={e => handleOrderByDiet(e)} defaultValue='default'>
                                 <option value="default" >All diets</option>
+                                {/* {console.log(diets)} */}
                                 {
                                     diets && diets?.map((d, i) => (
                                         <option value={d.name} key={i}>{d.name}</option>

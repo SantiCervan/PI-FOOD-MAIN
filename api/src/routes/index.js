@@ -120,7 +120,7 @@ router.get('/recipes/:id', async (req, res) => {
 })
 
 router.post('/recipes', async (req, res) => {
-    const { title, image, healthScore, summary, instructions, diets } = req.body
+    const { title, image, healthScore, summary, instructions, diets, dishTypes } = req.body
     try {
         let newRecipes = await Recipe.create({
             title,
@@ -128,6 +128,7 @@ router.post('/recipes', async (req, res) => {
             healthScore,
             summary,
             instructions,
+            dishTypes,
         })
         diets.map(async d => {
             const dbDiet = await Diet.findOrCreate({
@@ -147,6 +148,15 @@ router.get('/diets', async (req, res) => {
     try {
         const diets = await Diet.findAll()
         res.json(diets)
+    } catch (err) {
+        console.log(err)
+    }
+})
+
+router.get('/recipesdatabase', async (req, res) => {
+    try {
+        const recipesDb = await Recipe.findAll()
+        res.json(recipesDb)
     } catch (err) {
         console.log(err)
     }

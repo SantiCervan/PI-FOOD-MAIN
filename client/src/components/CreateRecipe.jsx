@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getAllDiets, postRecipe } from '../redux/actions';
+import { getAllDiets, getRecipeDb, postRecipe } from '../redux/actions';
 import Navbar from './Navbar';
 import s from './styles/CreateRecipe.module.css'
 
@@ -22,6 +22,9 @@ function validate(post) {
     if (!post.summary) {
         errors.summary = 'Write a short summary'
     }
+    if (!post.dishTypes) {
+        errors.dishTypes = 'Write a dish type'
+    }
     if (!post.instructions) {
         errors.instructions = 'Write the instructions on how to cook the recipe'
     }
@@ -32,11 +35,19 @@ const CreateRecipe = () => {
 
     const dispatch = useDispatch();
     const diets = useSelector(state => state.diets);
+    const recipesDb = useSelector(state => state.recipesDb);
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
         dispatch(getAllDiets())
     }, [dispatch])
+
+    useEffect(() => {
+        dispatch(getRecipeDb())
+    }, [dispatch])
+
+    console.log(diets);
+    console.log(recipesDb);
 
     const [post, setPost] = useState({
         title: '',
@@ -44,6 +55,7 @@ const CreateRecipe = () => {
         healthScore: 0,
         diets: [],
         summary: '',
+        dishTypes: '',
         instructions: '',
     })
 
@@ -133,6 +145,13 @@ const CreateRecipe = () => {
                                 <input className={s.input} autoComplete='off' type='text' value={post.instructions} placeholder='Write the instructions' name='instructions' onChange={e => handleInputChange(e)} />
                                 {errors.instructions && (
                                     <p className={s.errors}>{errors.instructions}</p>
+                                )}
+                            </div>
+                            <div className={s.container4}>
+                                <label>Dish type</label>
+                                <input className={s.input} autoComplete='off' type='text' value={post.dishTypes} placeholder='Write the dish type' name='dishTypes' onChange={e => handleInputChange(e)} />
+                                {errors.dishTypes && (
+                                    <p className={s.errors}>{errors.dishTypes}</p>
                                 )}
                             </div>
                             <div className={s.container4}>
