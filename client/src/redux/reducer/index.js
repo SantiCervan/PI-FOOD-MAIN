@@ -3,7 +3,6 @@ const initialState = {
     recipesCopy: [],
     details: [],
     diets: [],
-    recipesDb: [],
 }
 
 function rootReducer(state = initialState, action) {
@@ -18,11 +17,6 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 diets: action.payload
-            }
-        case 'GET_RECIPE_DB':
-            return {
-                ...state,
-                recipesDb: action.payload
             }
         case 'GET_RECIPES_BY_NAME':
             return {

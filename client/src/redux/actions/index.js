@@ -67,17 +67,6 @@ export function getAllDiets() {
     }
 }
 
-
-export function getRecipeDb() {
-    return async function (dispatch) {
-        let json = await axios.get('/recipesdatabase');
-        return dispatch({
-            type: 'GET_RECIPE_DB',
-            payload: json.data
-        })
-    }
-}
-
 export function orderByName(payload) {
     return {
         type: 'ORDER_BY_NAME',

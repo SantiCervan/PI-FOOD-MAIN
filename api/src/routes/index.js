@@ -153,14 +153,5 @@ router.get('/diets', async (req, res) => {
     }
 })
 
-router.get('/recipesdatabase', async (req, res) => {
-    try {
-        const recipesDb = await Recipe.findAll()
-        res.json(recipesDb)
-    } catch (err) {
-        console.log(err)
-    }
-})
-
 
 module.exports = router;

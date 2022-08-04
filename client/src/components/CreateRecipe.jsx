@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getAllDiets, getRecipeDb, postRecipe } from '../redux/actions';
+import { getAllDiets, postRecipe } from '../redux/actions';
 import Navbar from './Navbar';
 import s from './styles/CreateRecipe.module.css'
 
@@ -35,19 +35,11 @@ const CreateRecipe = () => {
 
     const dispatch = useDispatch();
     const diets = useSelector(state => state.diets);
-    const recipesDb = useSelector(state => state.recipesDb);
     const [errors, setErrors] = useState({});
 
     useEffect(() => {
         dispatch(getAllDiets())
     }, [dispatch])
-
-    useEffect(() => {
-        dispatch(getRecipeDb())
-    }, [dispatch])
-
-    console.log(diets);
-    console.log(recipesDb);
 
     const [post, setPost] = useState({
         title: '',
