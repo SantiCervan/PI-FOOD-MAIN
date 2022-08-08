@@ -1,7 +1,9 @@
+require('dotenv').config();
 const { Router } = require('express');
 const axios = require('axios');
 const { Recipe, Diet } = require('../db')
 const { Op } = require('sequelize');
+const { APIKEY } = process.env
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -15,7 +17,7 @@ router.get('/recipes', async (req, res) => {
     const { title } = req.query
     try {
         if (title) {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${title}&apiKey=${process.env.APIKEY}&addRecipeInformation=true&number=86`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${title}&apiKey=${APIKEY}&addRecipeInformation=true&number=86`)
             if (data.totalResults === 0) {
                 res.send("The required recipe doesn't exist.")
             }
