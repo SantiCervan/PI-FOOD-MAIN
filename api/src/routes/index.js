@@ -53,7 +53,7 @@ router.get('/recipes', async (req, res) => {
             let recipeResult = recipeDb.concat(map)
             res.status(200).json(recipeResult)
         } else {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.APIKEY}&addRecipeInformation=true&number=86`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&addRecipeInformation=true&number=86`)
             const map = data.results.map((r) => {
                 let dietType = []
                 if (r.vegetarian === true) dietType.push('vegetarian')
@@ -91,7 +91,7 @@ router.get('/recipes/:id', async (req, res) => {
     let recipeInfo;
     try {
         if (id >= 0) {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.APIKEY}`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${APIKEY}`)
             const apiInfo = {
                 id: data.id,
                 image: data.image,
