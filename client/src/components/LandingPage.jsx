@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import s from './styles/LandingPage.module.css'
+import { getAllRecipes, getAllDiets } from '../redux/actions';
+import { useDispatch } from 'react-redux';
 
 const LandingPage = () => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getAllRecipes())
+        dispatch(getAllDiets())
+    }, [dispatch])
+
     return (
         <div className={s.principal}>
             <Link to={'/recipes'}>

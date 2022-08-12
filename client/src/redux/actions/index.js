@@ -94,6 +94,13 @@ export function clearDetails() {
     }
 }
 
+export function setPage(num) {
+    return {
+        type: 'SET_PAGE',
+        payload: num
+    }
+}
+
 
 
 export function postRecipe(payload) {

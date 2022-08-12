@@ -3,6 +3,7 @@ const initialState = {
     recipesCopy: [],
     details: [],
     diets: [],
+    page: 1,
 }
 
 function rootReducer(state = initialState, action) {
@@ -79,6 +80,11 @@ function rootReducer(state = initialState, action) {
         case 'POST_RECIPE':
             return {
                 ...state
+            }
+        case 'SET_PAGE':
+            return {
+                ...state,
+                page: action.payload
             }
         default:
             return state

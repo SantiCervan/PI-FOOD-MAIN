@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllRecipes, filterByDiet, orderByName, orderByScore, getAllDiets, clearDetails } from '../redux/actions';
+import { getAllRecipes, filterByDiet, orderByName, orderByScore, getAllDiets, clearDetails, setPage } from '../redux/actions';
 import Navbar from "../components/Navbar";
 import Paginated from './Paginated';
 import s from './styles/Home.module.css'
@@ -13,15 +13,15 @@ const Home = () => {
     const [santi, setSanti] = useState(true)
     const diets = useSelector(state => state.diets);
     const recipes = useSelector((state) => state.recipes)
+    const page = useSelector((state) => state.page)
 
-    const [currentPage, setCurrentPage] = useState(1);
     const [recipesPerPage, setRecipesPerPage] = useState(9);
-    const lastRecipe = currentPage * recipesPerPage;
+    const lastRecipe = page * recipesPerPage;
     const firstRecipe = lastRecipe - recipesPerPage;
     const pagedRecipes = recipes.slice(firstRecipe, lastRecipe);
 
     const paginate = (number) => {
-        setCurrentPage(number)
+        dispatch(setPage(number));
     };
 
     useEffect(() => {
@@ -33,12 +33,7 @@ const Home = () => {
     }, [dispatch])
 
     useEffect(() => {
-        dispatch(getAllRecipes())
         dispatch(clearDetails())
-    }, [dispatch])
-
-    useEffect(() => {
-        dispatch(getAllDiets())
     }, [dispatch])
 
     const handleOrderByName = (e) => {
@@ -51,12 +46,12 @@ const Home = () => {
             dispatch(orderByScore(e.target.value))
             santi ? setSanti(false) : setSanti(true)
         }
-        setCurrentPage(1)
+        dispatch(setPage(1))
     }
 
     const handleOrderByDiet = (e) => {
         dispatch(filterByDiet(e.target.value))
-        setCurrentPage(1)
+        dispatch(setPage(1))
     }
 
     return (
@@ -87,7 +82,7 @@ const Home = () => {
                                 }
                             </select>
                         </div>
-                        <button className={s.button} onClick={() => { dispatch(getAllRecipes()); setCurrentPage(1) }}>Clear</button>
+                        <button className={s.button} onClick={() => { dispatch(getAllRecipes()); dispatch(setPage(1)) }}>Clear</button>
                     </div>
                 </div>
                 <div className={s.border2}>

@@ -65,7 +65,7 @@ const CreateRecipe = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (Object.values(errors).length > 0) alert('Please fill in all the fields')
+        if (Object.values(errors).length > 0 || Object.values(post).some((el) => el.length === 0)) alert('Please fill in all the fields')
         else {
             dispatch(postRecipe(post));
             window.history.back();
