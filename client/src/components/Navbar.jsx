@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import s from './styles/Navbar.module.css'
 import image from '../images/icons8-home-96.png'
 import create from '../images/icons8-create-64.png'
+import linkedin from '../images/icons8-linkedin-rodeado-de-círculo-90.png'
+import github from '../images/icons8-github-90.png'
 
 
 const Navbar = () => {
@@ -43,6 +45,14 @@ const Navbar = () => {
                         <button className={s.button}>CREATE YOUR OWN RECIPE</button>
                     </div>
                 </Link>
+                <div>
+                    <a href='https://www.linkedin.com/in/santiago-cervan-abrego-18494a242/' target='_blank'>
+                        <img className={s.icon} src={linkedin} />
+                    </a>
+                    <a href="https://github.com/SantiCervan" target='_blank'>
+                        <img className={s.icon} src={github} />
+                    </a>
+                </div>
             </div>
         </div>
     )

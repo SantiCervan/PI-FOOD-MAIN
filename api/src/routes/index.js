@@ -1,9 +1,7 @@
-require('dotenv').config();
 const { Router } = require('express');
 const axios = require('axios');
 const { Recipe, Diet } = require('../db')
 const { Op } = require('sequelize');
-const { APIKEY } = process.env
 
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
@@ -17,7 +15,7 @@ router.get('/recipes', async (req, res) => {
     const { title } = req.query
     try {
         if (title) {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${title}&apiKey=${APIKEY}&addRecipeInformation=true&number=86`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?query=${title}&apiKey=${process.env.APIKEY}&addRecipeInformation=true&number=86`)
             if (data.totalResults === 0) {
                 res.send("The required recipe doesn't exist.")
             }
@@ -53,7 +51,7 @@ router.get('/recipes', async (req, res) => {
             let recipeResult = recipeDb.concat(map)
             res.status(200).json(recipeResult)
         } else {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${APIKEY}&addRecipeInformation=true&number=86`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.APIKEY}&addRecipeInformation=true&number=86`)
             const map = data.results.map((r) => {
                 let dietType = []
                 if (r.vegetarian === true) dietType.push('vegetarian')
@@ -91,7 +89,7 @@ router.get('/recipes/:id', async (req, res) => {
     let recipeInfo;
     try {
         if (id >= 0) {
-            let { data } = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${APIKEY}`)
+            let { data } = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?includeNutrition=false&apiKey=${process.env.APIKEY}`)
             const apiInfo = {
                 id: data.id,
                 image: data.image,

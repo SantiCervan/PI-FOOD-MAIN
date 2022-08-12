@@ -2,12 +2,13 @@
     font-family: sans-serif;
 }
 
+
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     max-height: auto;
-    width: 99vw;
+    width: 100%;
     background-image: url(../../images/diet.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -19,7 +20,7 @@
 .titleContainer {
     width: 50rem;
     height: 4rem;
-    backdrop-filter: blur(3px) brightness(50%);
+    backdrop-filter: blur(5px) brightness(50%);
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
@@ -47,7 +48,7 @@
     justify-content: space-between;
     border-radius: 2rem;
     width: 50rem;
-    backdrop-filter: blur(3px) brightness(50%);
+    backdrop-filter: blur(5px) brightness(50%);
     height: auto;
     padding: 2rem 4rem 4rem 4rem;
 }
@@ -90,7 +91,7 @@
     align-items: space-between;
     margin-bottom: 1rem;
     padding-top: 0.4rem;
-    background-color: #8f9955dc;
+    background-color: rgb(168 180 96);
 }
 
 .dietName {
@@ -122,14 +123,14 @@
     background-color: red;
     border-radius: 50%;
     border-color: #919191;
-    background-color: #565c32;
+    background-color: rgb(168 180 96);
     color: white;
     margin-left: 5rem;
 }
 
 .button2:hover {
     color: white;
-    background-color: rgb(168 180 96);
+    background-color: #565c32;
     cursor: pointer;
 }
 
@@ -155,12 +156,12 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
-    background-color: #919c5e;
+    background-color: rgb(168 180 96);
     color: white;
     cursor: pointer;
 }
 
 .create:hover {
     cursor: pointer;
-    background-color: #818a4d;
+    background-color: #565c32;
 }

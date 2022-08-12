@@ -9,7 +9,7 @@
 .principal {
     background-image: url(../../images/palta.jpg);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-position-y: -200px;
     display: flex;
@@ -25,11 +25,11 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    backdrop-filter: blur(3px) brightness(70%);
+    backdrop-filter: blur(5px) brightness(70%);
 }
 
 .container:hover {
-    backdrop-filter: blur(3px) brightness(67%);
+    backdrop-filter: blur(5px) brightness(67%);
 }
 
 .title {

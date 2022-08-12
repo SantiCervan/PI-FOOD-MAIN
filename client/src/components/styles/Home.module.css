@@ -3,6 +3,29 @@
     text-decoration: none;
 }
 
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(168 180 96) #596035;
+    ;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #596035;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(168 180 96);
+    border-radius: 20px;
+    border: 3px solid #596035;
+    ;
+}
+
 .image {
     width: 312px;
     height: 231px;
@@ -35,7 +58,7 @@
     border-radius: 1rem;
     height: auto;
     width: 80%;
-    backdrop-filter: blur(3px) brightness(50%);
+    backdrop-filter: blur(5px) brightness(50%);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -63,16 +86,18 @@
 
 .button {
     height: 2rem;
-    width: 4rem;
+    width: 8rem;
+    text-transform: uppercase;
+    font-weight: bold;
     border-radius: 10px;
     border-color: #919191;
-    background-color: #565c32;
+    background-color: rgb(168 180 96);
     color: white;
 }
 
 .button:hover {
+    background-color: #565c32;
     color: white;
-    background-color: rgb(168 180 96);
     cursor: pointer;
 }
 
@@ -91,7 +116,7 @@
     padding-bottom: 2rem;
     height: auto;
     width: 80%;
-    backdrop-filter: blur(3px) brightness(50%);
+    backdrop-filter: blur(5px) brightness(50%);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
