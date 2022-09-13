@@ -46,7 +46,7 @@ const Navbar = () => {
                     </div>
                 </Link>
                 <div>
-                    <a href='https://www.linkedin.com/in/santiago-cervan-abrego-18494a242/' target='_blank'>
+                    <a href='https://www.linkedin.com/in/santicervan/' target='_blank'>
                         <img className={s.icon} src={linkedin} />
                     </a>
                     <a href="https://github.com/SantiCervan" target='_blank'>
